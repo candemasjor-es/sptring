@@ -1,0 +1,14 @@
+<div *ngIf="student">
+    <h2>{{student.name | uppercase}} Details</h2>
+    <div>ID: {{student.id}}</div>
+    <div>
+        <label for="student-name">Name: </label>
+        <input id="student-name" [(ngModel)]="student.name" placeholder="Student name">
+    </div>
+    <div>
+        <label for="student-email">Email: </label>
+        <input id="student-email" [(ngModel)]="student.email" placeholder="Student email">
+    </div>
+    <button type="button" (click)="goBack()">go back</button>
+    <button type="button" (click)="save()">save</button>
+</div>
